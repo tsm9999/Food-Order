@@ -1,50 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".SignUpActivity">
-    <EditText
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Name"
-        android:id="@+id/name"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Mobile no."
-        android:id="@+id/mobile"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Mail"
-        android:id="@+id/mail"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:id="@+id/password"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ReType Password"
-        android:id="@+id/rpassword"
-        android:onClick="passwordCheck"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OK"
-        android:id="@+id/signup"
-        />
-</LinearLayout>
-
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="40dp"
+        >
+        <!--android:background="@mipmap/back_login"-->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_account_circle_black_24dp"
+            android:layout_marginTop="50dp"
+            ></ImageView>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/name"
+            android:hint="Name"
+            android:layout_marginTop="100dp"
+            android:textColor="#000"
+            android:paddingLeft="0dp"
+            android:textColorHint="#999"
+            />
+        <!--        android:drawableLeft="@mipmap/account"-->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/mail"
+            android:hint="Email-id"
+            android:textColor="#000"
+            android:paddingLeft="0dp"
+            android:textColorHint="#999"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/mobile"
+            android:hint="Phone"
+            android:textColor="#000"
+            android:paddingLeft="0dp"
+            android:textColorHint="#999"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password"
+            android:hint="Password"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:paddingLeft="0dp"
+            android:drawablePadding="5dp"
+            android:textColorHint="#999"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/rpassword"
+            android:hint="Retype Password"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:paddingLeft="0dp"
+            android:drawablePadding="5dp"
+            android:textColorHint="#999"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            />
+        <!--        android:drawableLeft="@mipmap/lock"-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="SignUp"
+            android:id="@+id/signup"
+            android:background="@drawable/selector_xml_btn_yellow"
+            android:layout_gravity="center_horizontal"
+            android:onClick="checkLogin"/>
+    </LinearLayout>
+</ScrollView>
 
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bottombar_navigation_with_fragment">
+    package="com.example.aissms">
 
     <application
         android:allowBackup="true"
@@ -10,19 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name="com.example.aissms.SignUpActivity"></activity>
+        <activity android:name="com.example.aissms.LoginActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".OrderSnapshot" />
-        <activity android:name=".Desserts" />
-        <activity android:name=".Pizza" />
-        <activity android:name=".Burgers" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.aissms.OrderSnapshot" />
+        <activity android:name="com.example.aissms.checksum" />
+        <activity android:name="com.example.aissms.Desserts" />
+        <activity android:name="com.example.aissms.Pizza" />
+        <activity android:name="com.example.aissms.Burgers" />
+        <activity android:name="com.example.aissms.MainActivity">
 
         </activity>
     </application>

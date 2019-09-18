@@ -1,4 +1,4 @@
-package com.example.bottombar_navigation_with_fragment;
+package com.example.aissms;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,17 +11,17 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 
-public class HomeFragment extends Fragment {
+public class MenuFragment extends Fragment {
 
     CardView cvBurger,cvPizza,cvDessert;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        //just change the fragment_dashboard
+        //just change the fragment_cart
         //with the fragment you want to inflate
-        //like if the class is HomeFragment it should have R.layout.home_fragment
-        //if it is DashboardFragment it should have R.layout.fragment_dashboard
-        return inflater.inflate(R.layout.fragment_home, null);
+        //like if the class is MenuFragment it should have R.layout.home_fragment
+        //if it is CartFragment it should have R.layout.fragment_cart
+        return inflater.inflate(R.layout.fragment_menu, null);
     }
 
     @Override

@@ -17,10 +17,17 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b1"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b1"
             android:clickable="true">
 
             <TextView
@@ -29,10 +36,17 @@
                 android:text="Burger 1"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
             android:id="@+id/b2"
             android:clickable="true">
 
@@ -42,11 +56,18 @@
                 android:text="Burger 2"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b3"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b3"
             android:clickable="true">
 
             <TextView
@@ -55,11 +76,18 @@
                 android:text="Burger 3"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b4"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b4"
             android:clickable="true">
 
             <TextView
@@ -68,11 +96,18 @@
                 android:text="Burger 4"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b5"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b5"
             android:clickable="true">
 
             <TextView
@@ -81,11 +116,18 @@
                 android:text="Burger 5"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b6"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b6"
             android:clickable="true">
 
             <TextView
@@ -94,11 +136,18 @@
                 android:text="Burger 6"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b7"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b7"
             android:clickable="true">
 
             <TextView
@@ -107,11 +156,18 @@
                 android:text="Burger 7"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b8"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b8"
             android:clickable="true">
 
             <TextView
@@ -120,11 +176,18 @@
                 android:text="Burger 8"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b9"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b9"
             android:clickable="true">
 
             <TextView
@@ -133,11 +196,18 @@
                 android:text="Burger 9"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
-            android:id="@+id/b10"
             android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            app:strokeWidth="3dp"
+            android:id="@+id/b10"
             android:clickable="true">
 
             <TextView
@@ -146,7 +216,8 @@
                 android:text="Burger 10"
                 android:layout_gravity="center"
                 android:gravity="center"/>
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
+       
 
     </LinearLayout>
 

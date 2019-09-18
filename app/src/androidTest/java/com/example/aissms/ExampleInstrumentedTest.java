@@ -1,4 +1,4 @@
-package com.example.bottombar_navigation_with_fragment;
+package com.example.aissms;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.bottombar_navigation_with_fragment", appContext.getPackageName());
+        assertEquals("com.example.com.example.aissms", appContext.getPackageName());
     }
 }

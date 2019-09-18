@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            android:id="@+id/cvburger"
+            app:strokeWidth="3dp">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Burgers"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            android:id="@+id/cvpizza"
+            app:strokeWidth="3dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pizzas"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="10dp"
+            app:strokeColor="@color/colorDarkBlue1"
+            android:id="@+id/cvdesserts"
+            app:strokeWidth="3dp">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Desserts"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.bottombar_navigation_with_fragment;
+package com.example.aissms;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,101 +7,102 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class Pizza extends AppCompatActivity {
-    CardView p1,p2,p3,p4,p5,p6,p7,p8,p9,p10;
+public class Burgers extends AppCompatActivity {
+    CardView b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pizza);
-        p1=findViewById(R.id.p1);
-        p2=findViewById(R.id.p2);
-        p3=findViewById(R.id.p3);
-        p4=findViewById(R.id.p4);
-        p5=findViewById(R.id.p5);
-        p6=findViewById(R.id.p6);
-        p7=findViewById(R.id.p7);
-        p8=findViewById(R.id.p8);
-        p9=findViewById(R.id.p9);
-        p10=findViewById(R.id.p10);
+        setContentView(R.layout.activity_burgers);
 
-        p1.setOnClickListener(new View.OnClickListener() {
+        b1=findViewById(R.id.b1);
+        b2=findViewById(R.id.b2);
+        b3=findViewById(R.id.b3);
+        b4=findViewById(R.id.b4);
+        b5=findViewById(R.id.b5);
+        b6=findViewById(R.id.b6);
+        b7=findViewById(R.id.b7);
+        b8=findViewById(R.id.b8);
+        b9=findViewById(R.id.b9);
+        b10=findViewById(R.id.b10);
+
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 1");
+                intent.putExtra("name","Burger 1");
                 startActivity(intent);
             }
         });
-        p2.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 2");
+                intent.putExtra("name","Burger 2");
                 startActivity(intent);
             }
         });
-        p3.setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 3");
+                intent.putExtra("name","Burger 3");
                 startActivity(intent);
             }
         });
-        p4.setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 4");
+                intent.putExtra("name","Burger 4");
                 startActivity(intent);
             }
         });
-        p5.setOnClickListener(new View.OnClickListener() {
+        b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 5");
+                intent.putExtra("name","Burger 5");
                 startActivity(intent);
             }
         });
-        p6.setOnClickListener(new View.OnClickListener() {
+        b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 6");
+                intent.putExtra("name","Burger 6");
                 startActivity(intent);
             }
         });
-        p7.setOnClickListener(new View.OnClickListener() {
+        b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 7");
+                intent.putExtra("name","Burger 7");
                 startActivity(intent);
             }
         });
-        p8.setOnClickListener(new View.OnClickListener() {
+        b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 8");
+                intent.putExtra("name","Burger 8");
                 startActivity(intent);
             }
         });
-        p9.setOnClickListener(new View.OnClickListener() {
+        b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 9");
+                intent.putExtra("name","Burger 9");
                 startActivity(intent);
             }
         });
-        p10.setOnClickListener(new View.OnClickListener() {
+        b10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 10");
+                intent.putExtra("name","Burger 10");
                 startActivity(intent);
             }
         });

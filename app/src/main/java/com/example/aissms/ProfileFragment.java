@@ -1,4 +1,4 @@
-package com.example.bottombar_navigation_with_fragment;
+package com.example.aissms;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

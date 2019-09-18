@@ -17,10 +17,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d1"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d1"
                 android:clickable="true">
 
                 <TextView
@@ -29,10 +36,17 @@
                     android:text="Dessert 1"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
                 android:id="@+id/d2"
                 android:clickable="true">
 
@@ -42,11 +56,18 @@
                     android:text="Dessert 2"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d3"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d3"
                 android:clickable="true">
 
                 <TextView
@@ -55,11 +76,18 @@
                     android:text="Dessert 3"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d4"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d4"
                 android:clickable="true">
 
                 <TextView
@@ -68,11 +96,18 @@
                     android:text="Dessert 4"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d5"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d5"
                 android:clickable="true">
 
                 <TextView
@@ -81,11 +116,18 @@
                     android:text="Dessert 5"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d6"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d6"
                 android:clickable="true">
 
                 <TextView
@@ -94,11 +136,18 @@
                     android:text="Dessert 6"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d7"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d7"
                 android:clickable="true">
 
                 <TextView
@@ -107,11 +156,18 @@
                     android:text="Dessert 7"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d8"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d8"
                 android:clickable="true">
 
                 <TextView
@@ -120,11 +176,18 @@
                     android:text="Dessert 8"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d9"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d9"
                 android:clickable="true">
 
                 <TextView
@@ -133,11 +196,18 @@
                     android:text="Dessert 9"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:id="@+id/d10"
                 android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="10dp"
+                app:strokeColor="@color/colorDarkBlue1"
+                app:strokeWidth="3dp"
+                android:id="@+id/d10"
                 android:clickable="true">
 
                 <TextView
@@ -146,7 +216,8 @@
                     android:text="Dessert 10"
                     android:layout_gravity="center"
                     android:gravity="center"/>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
+
 
         </LinearLayout>
 
