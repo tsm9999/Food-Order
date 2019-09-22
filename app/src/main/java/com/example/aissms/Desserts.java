@@ -31,7 +31,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 1");
+                intent.putExtra("name","D1");
                 startActivity(intent);
             }
         });
@@ -39,7 +39,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 2");
+                intent.putExtra("name","D2");
                 startActivity(intent);
             }
         });
@@ -47,7 +47,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 3");
+                intent.putExtra("name","D3");
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 4");
+                intent.putExtra("name","D4");
                 startActivity(intent);
             }
         });
@@ -63,7 +63,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 5");
+                intent.putExtra("name","D5");
                 startActivity(intent);
             }
         });
@@ -71,7 +71,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 6");
+                intent.putExtra("name","D6");
                 startActivity(intent);
             }
         });
@@ -79,7 +79,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 7");
+                intent.putExtra("name","D7");
                 startActivity(intent);
             }
         });
@@ -87,7 +87,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 8");
+                intent.putExtra("name","D8");
                 startActivity(intent);
             }
         });
@@ -95,7 +95,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 9");
+                intent.putExtra("name","D9");
                 startActivity(intent);
             }
         });
@@ -103,7 +103,7 @@ public class Desserts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Dessert 10");
+                intent.putExtra("name","D10");
                 startActivity(intent);
             }
         });

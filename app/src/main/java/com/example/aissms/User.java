@@ -3,7 +3,7 @@ package com.example.aissms;
 public class User {
     int amount;
     String id;
-    public User(int amount, String id, String items) {
+    public User(int amount, String id, String items, String username) {
         this.amount = amount;
         this.id = id;
         this.items = items;

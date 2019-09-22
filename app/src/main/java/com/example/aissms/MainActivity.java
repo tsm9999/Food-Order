@@ -49,9 +49,7 @@ public class MainActivity extends AppCompatActivity implements
                 fragment = new MenuFragment();
                 break;
 
-            case R.id.navigation_dashboard:
-                fragment = new CartFragment();
-                break;
+
 
             case R.id.navigation_notifications:
                 fragment = new OrdersFragment();

@@ -30,7 +30,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 1");
+                intent.putExtra("name","B1");
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 2");
+                intent.putExtra("name","B2");
                 startActivity(intent);
             }
         });
@@ -46,7 +46,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 3");
+                intent.putExtra("name","B3");
                 startActivity(intent);
             }
         });
@@ -54,7 +54,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 4");
+                intent.putExtra("name","B4");
                 startActivity(intent);
             }
         });
@@ -62,7 +62,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 5");
+                intent.putExtra("name","B5");
                 startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class Burgers extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Burger 6");
+                intent.putExtra("name","B6");
                 startActivity(intent);
             }
         });

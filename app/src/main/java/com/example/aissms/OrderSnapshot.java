@@ -1,5 +1,6 @@
 package com.example.aissms;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -18,7 +19,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -34,17 +38,21 @@ import java.util.UUID;
 public class OrderSnapshot extends AppCompatActivity {
     TextView tv,amount,cost;
     ImageView add,remove;
+    String ITEM;
     Button pay;
+    static Integer COUNT=0;
     private static final String UPI_ID = "7507457622@ybl";
     FirebaseFirestore db;
     CollectionReference cr;
     static Map<String, Integer> m;
+CollectionReference cr2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_snapshot);
         db=FirebaseFirestore.getInstance();
+        createMap();
         cr=db.collection("PaymentDetails");
         tv=findViewById(R.id.ordername);
         cost=findViewById(R.id.cost);
@@ -52,6 +60,7 @@ public class OrderSnapshot extends AppCompatActivity {
         add=findViewById(R.id.add);
         remove=findViewById(R.id.remove);
         pay=findViewById(R.id.addtocart);
+        cr2=db.collection("Users");
 
         Intent intent=getIntent();
        final String s= intent.getStringExtra("name");
@@ -63,7 +72,7 @@ public class OrderSnapshot extends AppCompatActivity {
             public void onClick(View v) {
                 final String[] payment = {"Paytm"
                         ,"UPI"
-//                        ,"Cash"
+                       ,"Cash"
                 };
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -74,9 +83,14 @@ public class OrderSnapshot extends AppCompatActivity {
                                                 .setItems(payment, new DialogInterface.OnClickListener() {
                                                     @Override
                                                     public void onClick(DialogInterface dialogInterface, int i) {
+                                                        ProgressDialog progressDialog=new ProgressDialog(OrderSnapshot.this);
+                                                        progressDialog.setMessage("Loading...");
+                                                        progressDialog.show();
                                                         switch (i) {
                                                             case 0:
                                                                     additem1(s);
+                                                                    ITEM=s;
+                                                                    progressDialog.dismiss();
                                                                     Intent intent=new Intent(OrderSnapshot.this,checksum.class);
                                                                     intent.putExtra("orderid", uuid_gen());//uuid
                                                                     intent.putExtra("custid", getSaltString());//rnd
@@ -88,11 +102,16 @@ public class OrderSnapshot extends AppCompatActivity {
                                                                 break;
                                                             case 1:
                                                                 additem1(s);
+                                                                ITEM=s;
+                                                                progressDialog.dismiss();
                                                                 UPI_transaction();
                                                                 break;
-//                                                        case 2:
-//                                                            Cash_transaction();
-//                                                            break;
+                                                        case 2:
+                                                            additem1(s);
+                                                            ITEM=s;
+                                                            progressDialog.dismiss();
+                                                            Cash_transaction();
+                                                            break;
                                                         }
                                                     }
                                                 })
@@ -121,6 +140,8 @@ public class OrderSnapshot extends AppCompatActivity {
         if(count>1)
         {
             count--;
+            COUNT=count;
+           del(ITEM);
             amount.setText(String.valueOf(count));
             cost.setText("Cost: Rs. "+String.valueOf(count*100));
         }
@@ -130,6 +151,7 @@ public class OrderSnapshot extends AppCompatActivity {
         int count= Integer.parseInt(amount.getText().toString());
         count++;
         amount.setText(String.valueOf(count));
+        COUNT=count;
         cost.setText("Cost: Rs. "+String.valueOf(count*100));
 
 
@@ -148,24 +170,34 @@ public class OrderSnapshot extends AppCompatActivity {
                     {
                         if(data.getStringExtra("TXN_RESPONSE").equals("TXN_SUCCESS"))
                         {
-                            User user=new User(1,getSaltString(),viewcart());
+                            User user=new User((Integer.parseInt(amount.getText().toString())),getSaltString(),viewcart(),"");
                             cr.add(user)
                                     .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
                                         @Override
                                         public void onComplete(@NonNull Task<DocumentReference> task) {
                                             if(task.isSuccessful())
                                             {
-                                                Toast.makeText(OrderSnapshot.this, "user registered", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(OrderSnapshot.this, "Payment Successful", Toast.LENGTH_SHORT).show();
                                                 String message = "";
                                                 Resources res = getResources();
 //                                                String dontreply = String.format(res.getString(R.string.donotreply));
                                                 String email1 ="tanushmaddiwar@gmail.com";//abhi ke liye temp
                                                 String subject = "Food Order";
-                                                message="Your Transaction is successful";
+                                                message="Your Transaction is successful(Paytm).";
                                                 SendMail sm = new SendMail(OrderSnapshot.this, email1, subject, message);
                                                 //Executing sendmail to send email
                                                 sm.execute();
-                                                startActivity(new Intent(OrderSnapshot.this,OrderSnapshot.class));
+
+                                                message = "";
+                                                Resources res1 = getResources();
+//                                                String dontreply = String.format(res.getString(R.string.donotreply));
+                                                String email11 ="gauravdesh26@gmail.com";//abhi ke liye temp
+                                                String subject1 = "New Food Order";
+                                                message="New Order via PayTM";
+                                                SendMail sm1 = new SendMail(OrderSnapshot.this, email11, subject1, message);
+                                                //Executing sendmail to send email
+                                                sm.execute();
+                                                startActivity(new Intent(OrderSnapshot.this,MainActivity.class));
                                             }
                                             else{
                                                 Toast.makeText(OrderSnapshot.this, "Some Error Occured Try Again", Toast.LENGTH_SHORT).show();
@@ -195,6 +227,50 @@ public class OrderSnapshot extends AppCompatActivity {
         String orderID=uuid.toString();
         return orderID;
     }
+
+    public void Cash_transaction()
+    {
+
+        User user=new User(Integer.parseInt(amount.getText().toString()),getSaltString(),viewcart(), FirebaseApp.getInstance().getName());
+        cr.add(user)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(OrderSnapshot.this, "Order Placed.", Toast.LENGTH_SHORT).show();
+//                        startActivity(new Intent(OrderSnapshot.this,MainActivity.class));
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(OrderSnapshot.this, "Some Error Occured", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+//                Toast.makeText(OrderSnapshot.this, "user registered", Toast.LENGTH_SHORT).show();
+        String message = "";
+        Resources res = getResources();
+//                                                String dontreply = String.format(res.getString(R.string.donotreply));
+        String email1 ="tanushmaddiwar@gmail.com";//abhi ke liye temp
+        String subject = "Food Order";
+        message="Your Order has been placed\n\nKindly Pay "+cost.getText().toString()+" in Cash at the counter while receiving the order.";
+        SendMail sm = new SendMail(OrderSnapshot.this, email1, subject, message);
+        //Executing sendmail to send email
+        sm.execute();
+
+        message = "";
+        Resources res1 = getResources();
+//                                                String dontreply = String.format(res.getString(R.string.donotreply));
+        String email11 ="gauravdesh26@gmail.com";//abhi ke liye temp
+        String subject1 = "New Food Order";
+        message="New Order via Cash";
+        SendMail sm1 = new SendMail(OrderSnapshot.this, email11, subject1, message);
+        //Executing sendmail to send email
+        sm1.execute();
+        startActivity(new Intent(OrderSnapshot.this,MainActivity.class));
+
+    }
+
     private String RefIDGen() {
         StringBuilder RefId = new StringBuilder();
         final int min = 1000;
@@ -247,21 +323,45 @@ public class OrderSnapshot extends AppCompatActivity {
             }
             @Override
             public void onTransactionSuccess() {
-                finish();
-                Toast.makeText(OrderSnapshot.this, "Payment successful.", Toast.LENGTH_SHORT).show();
+//                finish();
 //                payment_method="UPI";
 //                addTodb();
-                Toast.makeText(OrderSnapshot.this, "user registered", Toast.LENGTH_SHORT).show();
+                User user=new User(Integer.parseInt(amount.getText().toString()),getSaltString(),viewcart(),"");
+                cr.add(user)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Toast.makeText(OrderSnapshot.this, "Payment successful.", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(OrderSnapshot.this,MainActivity.class));
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(OrderSnapshot.this, "Some Error Occured", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+//                Toast.makeText(OrderSnapshot.this, "user registered", Toast.LENGTH_SHORT).show();
                 String message = "";
                 Resources res = getResources();
 //                                                String dontreply = String.format(res.getString(R.string.donotreply));
                 String email1 ="tanushmaddiwar@gmail.com";//abhi ke liye temp
                 String subject = "Food Order";
-                message="Your Transaction is successful";
+                message="Your Transaction is successful(UPI Payment).";
                 SendMail sm = new SendMail(OrderSnapshot.this, email1, subject, message);
                 //Executing sendmail to send email
                 sm.execute();
-                startActivity(new Intent(OrderSnapshot.this,OrderSnapshot.class));
+
+                message = "";
+                Resources res1 = getResources();
+//                                                String dontreply = String.format(res.getString(R.string.donotreply));
+                String email11 ="gauravdesh26@gmail.com";//abhi ke liye temp
+                String subject1 = "New Food Order";
+                message="New Order via UPI";
+                SendMail sm1 = new SendMail(OrderSnapshot.this, email11, subject1, message);
+                //Executing sendmail to send email
+                sm1.execute();
+//                startActivity(new Intent(OrderSnapshot.this,OrderSnapshot.class));
             }
             @Override
             public void onTransactionSubmitted() {
@@ -308,10 +408,13 @@ public class OrderSnapshot extends AppCompatActivity {
     }
 
     public static void additem1(String s) throws NullPointerException {
+
         if(m.get(s)==null)
             return;
-        m.replace(s, m.get(s) + 1);
+
+        m.put(s, m.get(s) +COUNT);
     }
+
     public static String viewcart()
     {
         String s="";
@@ -325,7 +428,7 @@ public class OrderSnapshot extends AppCompatActivity {
             if(p!=0)
             {
                 s+=k;
-                String z=" X";
+                String z=" x";
                 s+=z;
                 s+=String.valueOf(p);
                 s+="\n";
@@ -336,5 +439,14 @@ public class OrderSnapshot extends AppCompatActivity {
 
 
 
+public static void del(String s) throws NullPointerException
+        {
+            if(m.get(s)==null)return ;
+        int a=m.get(s);
+
+        if(a-COUNT>=0)
+        m.put(s,m.get(s)-COUNT);
+
+        }
 
 }

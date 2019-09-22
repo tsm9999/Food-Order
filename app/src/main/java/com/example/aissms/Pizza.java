@@ -29,7 +29,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 1");
+                intent.putExtra("name","P1");
                 startActivity(intent);
             }
         });
@@ -37,7 +37,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 2");
+                intent.putExtra("name","P2");
                 startActivity(intent);
             }
         });
@@ -45,7 +45,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 3");
+                intent.putExtra("name","P3");
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 4");
+                intent.putExtra("name","P4");
                 startActivity(intent);
             }
         });
@@ -61,7 +61,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 5");
+                intent.putExtra("name","P5");
                 startActivity(intent);
             }
         });
@@ -69,7 +69,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 6");
+                intent.putExtra("name","P6");
                 startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 7");
+                intent.putExtra("name","P7");
                 startActivity(intent);
             }
         });
@@ -85,7 +85,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 8");
+                intent.putExtra("name","P8");
                 startActivity(intent);
             }
         });
@@ -93,7 +93,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 9");
+                intent.putExtra("name","P9");
                 startActivity(intent);
             }
         });
@@ -101,7 +101,7 @@ public class Pizza extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getBaseContext(), OrderSnapshot.class);
-                intent.putExtra("name","Pizza 10");
+                intent.putExtra("name","P10");
                 startActivity(intent);
             }
         });
